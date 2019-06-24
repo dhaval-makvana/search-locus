@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width="device-width, initial-scale=1.0">
+        <title>Search</title>
+        <style>
+            body {
+                margin: 20px;
+                padding: 0px;
+            }
+
+            .search {
+                text-align: center;
+            }
+
+            .input_box {
+                width: 50%;
+                height: 30px;
+                font-size: 15px;
+                padding: 5px 10px 5px 10px;
+                border: 1px solid #c2c2c2;
+                border-radius: 8px;
+            }
+
+            .display_none {
+                display: none;
+            }
+
+            ul {
+                width: 50%;
+                margin: auto;
+                border: 1px solid #dbd7d7;
+                border-radius: 8px;
+                height: 400px;
+                overflow: auto;
+            }
+
+            li {
+                font-size: 14px;
+                text-align: left;
+                list-style: none;
+            }
+
+            li:hover {
+                background: #e3e7f7;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="search">
+            <input 
+                id="input_text"
+                class="input_box"
+                type="text"
+                placeholder="Search users by ID, name, address, ..."
+
+            />
+            <ul id="search-result" class="display_none">
+            </ul>
+        </div>
+        <script src="search.js"></script>
+    </body>
+</html>
