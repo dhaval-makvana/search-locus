@@ -109,6 +109,14 @@ function search(e) {
 function createList(searchResult) {
     var ul = document.getElementById('search-result');
     ul.style.display = 'block';
+    let len = searchResult.length;
+    
+    if (len === 0) {
+        ul.style.height = 20 + 'px';
+        ul.innerHTML = "<div>No users found!!</div>";
+        return;
+    }
+
     var li = '';
 
     searchResult.forEach((result, index) => {
@@ -124,8 +132,6 @@ function createList(searchResult) {
 
     ul.innerHTML = li;
 
-
-    let len = searchResult.length;
     if (len * 120 < 200) {
         ul.style.height = len * 120 + 'px';
     }
